@@ -1,0 +1,1537 @@
+{
+  "source_dir": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+  "name": "mycmyc/moon_metric_lab",
+  "packages": [
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "classification",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\binary.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\confusion_matrix.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\multiclass.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\threshold_scanner.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\classification_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\confusion_matrix_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\threshold_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/math",
+          "alias": "math",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\math"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\binary.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\confusion_matrix.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\multiclass.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\threshold_scanner.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/classification",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/classification:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\classification_test.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\confusion_matrix_test.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\threshold_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\binary.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\confusion_matrix.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\multiclass.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification\\threshold_scanner.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/classification_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi:classification",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/classification_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "clustering",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\external.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\internal.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\clustering_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/double",
+          "alias": "double",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\double"
+        },
+        {
+          "path": "moonbitlang/core/math",
+          "alias": "math",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\math"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\external.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\internal.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/clustering",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\double\\double.mi:double",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/clustering:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\clustering_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\external.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering\\internal.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/clustering_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi:clustering",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\double\\double.mi:double",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/clustering_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": true,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "cmd/main",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main\\main.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/classification",
+          "alias": "classification",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/clustering",
+          "alias": "clustering",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\clustering"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/ranking",
+          "alias": "ranking",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/regression",
+          "alias": "regression",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/report",
+          "alias": "report",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/visualization",
+          "alias": "visualization",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main\\main.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/cmd/main",
+        "-is-main",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi:classification",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi:clustering",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi:ranking",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi:regression",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/cmd/main:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main\\main.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/cmd/main_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi:classification",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi:clustering",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.mi:main",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi:ranking",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi:regression",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/cmd/main_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\cmd\\main",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "core",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\errors.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\matrix_view.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\stats_utils.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\vector_view.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\core_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/math",
+          "alias": "math",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\math"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\errors.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\matrix_view.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\stats_utils.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\vector_view.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/core",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/core:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\core_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\errors.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\matrix_view.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\stats_utils.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core\\vector_view.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/core_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/core_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": true,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "examples/binary_demo",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo\\main.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/classification",
+          "alias": "classification",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\classification"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/visualization",
+          "alias": "visualization",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo\\main.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/examples/binary_demo",
+        "-is-main",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi:classification",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/examples/binary_demo:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo\\main.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/examples/binary_demo_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.mi:binary_demo",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi:classification",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/examples/binary_demo_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\binary_demo",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": true,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "examples/comparison_demo",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo\\main.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/report",
+          "alias": "report",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/visualization",
+          "alias": "visualization",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo\\main.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/examples/comparison_demo",
+        "-is-main",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/examples/comparison_demo:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo\\main.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/examples/comparison_demo_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.mi:comparison_demo",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/examples/comparison_demo_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\examples\\comparison_demo",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "ranking",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking\\ir_metrics.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking\\ranking_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/math",
+          "alias": "math",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\math"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking\\ir_metrics.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/ranking",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/ranking:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking\\ranking_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking\\ir_metrics.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/ranking_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi:ranking",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/ranking_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\ranking",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "regression",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\continuous.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\robust.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\regression_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/math",
+          "alias": "math",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\math"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\continuous.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\robust.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/regression",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/regression:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\regression_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\continuous.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression\\robust.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/regression_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\math\\math.mi:math",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi:regression",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/regression_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\regression",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "report",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\comparison.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\evaluation_report.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\report_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\comparison.mbt",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\evaluation_report.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/report",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/report:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\report_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\comparison.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report\\evaluation_report.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/report_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/report_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization",
+      "root": "mycmyc/moon_metric_lab",
+      "rel": "visualization",
+      "files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization\\renderers.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization\\visualization_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/core",
+          "alias": "core",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\core"
+        },
+        {
+          "path": "mycmyc/moon_metric_lab/report",
+          "alias": "report",
+          "fspath": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\report"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\33046\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization\\renderers.mbt",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/visualization",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/visualization:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization",
+        "-target",
+        "native",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization\\visualization_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization\\renderers.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.blackbox_test.mi",
+        "-pkg",
+        "mycmyc/moon_metric_lab/visualization_blackbox_test",
+        "-std-path",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi:core",
+        "-i",
+        "C:\\Users\\33046\\.moon\\lib\\core\\_build\\native\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi:report",
+        "-i",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi:visualization",
+        "-pkg-sources",
+        "mycmyc/moon_metric_lab/visualization_blackbox_test:C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\visualization",
+        "-target",
+        "native",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫",
+        "-all-pkgs",
+        "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    }
+  ],
+  "deps": [],
+  "backend": "native",
+  "opt_level": "debug",
+  "source": null
+}

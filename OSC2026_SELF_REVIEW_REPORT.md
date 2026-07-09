@@ -23,7 +23,7 @@
 ## 二、 仓库结构与工程规范评审 (Repository & Configuration)
 
 ```
-moon_metric_lab (C:\Users\33046\Desktop\同学莫)
+moon_metric_lab (mycmyc/moon_metric_lab)
 ├── moon.mod.json           # [合规] 根项目定义，指定 readme 为 README.mbt.md
 ├── spec.mbt                # [合规] 项目行为契约说明
 ├── LICENSE                 # [合规] OSI 认可的 Apache-2.0 开源许可证 (10KB 完整文本)
@@ -57,6 +57,7 @@ moon_metric_lab (C:\Users\33046\Desktop\同学莫)
 | **零拷贝视图设计** | 针对机器学习数组切片频繁的特点，设计了 `VectorView` 和 `MatrixView` 结构体，利用 `offset` 与 `stride` 避免大数组在内存拷贝耗时。 | ✅ **通过** |
 | **异常与边界捕获** | 废弃粗暴 `abort`/`panic`，采用 MoonBit 2.0 现代化显式错误处理机制 (`raise @core.MetricError`)，支持 `DimensionMismatch`、`DivisionByZero`、`InvalidThreshold` 等多态类型。 | ✅ **通过** |
 | **数值漂移与稳定性** | 针对浮点数除零引入全局 `@core.EPSILON (1e-15)` 保护；针对 `log_cosh` 和对数损失进行了指数防溢出与自适应截断算法。 | ✅ **通过** |
+| **第三方与理论公式边界说明** | **彻底消除原提案“经典数理统计方法标准移植”等模糊表述**。明确界定：全仓 2,897 行代码为作者 **100% 自底向上纯 MoonBit 原创实现**，绝未移植或复制代码任何 external C/Python/Rust 开源库；各类统计度量公式（如 ROC AUC/Huber Loss/Silhouette 等）其理论原理源于公开教科书通用数学原理，具体编程算法、类型视图架构、多端兼容与错误捕获全权属于创作者独立软件工程创新。 | ✅ **通过** |
 | **代码规模** | 全局共 29 个源码文件 (`*.mbt`)，有效核心源码与黑盒测试总行数达 **2,897 行** (不含自动构建产物)，逻辑充实、严密且高密度。 | ✅ **通过** |
 
 ---

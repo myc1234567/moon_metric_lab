@@ -1,7 +1,7 @@
 {
   "is-main": true,
   "import": [
-    "username/moon_metric_lab/report",
-    "username/moon_metric_lab/visualization"
+    "mycmyc/moon_metric_lab/report",
+    "mycmyc/moon_metric_lab/visualization"
   ]
 }

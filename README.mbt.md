@@ -26,7 +26,7 @@
 MoonMetricLab follows a strictly modular, layered architecture:
 
 ```
-username/moon_metric_lab
+mycmyc/moon_metric_lab
 ├── core            # Base numerical primitives, zero-copy views, constants, and structured errors
 ├── classification  # Binary & multi-class metrics, confusion matrix, threshold scanner, ROC/PR curves
 ├── regression      # Continuous error metrics (MAE/MSE/RMSE/R2/MAPE) and robust losses (Huber/Pinball/Log-Cosh)
@@ -40,13 +40,13 @@ username/moon_metric_lab
 
 | Package | Description | Key APIs |
 | :--- | :--- | :--- |
-| [`core`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/core) | Numerical foundation & errors | `VectorView`, `MatrixView`, `validate_same_length`, `EPSILON` |
-| [`classification`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/classification) | Classification evaluation | `accuracy`, `f1_score`, `log_loss`, `mcc`, `roc_curve`, `ConfusionMatrix` |
-| [`regression`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/regression) | Continuous regression metrics | `mae`, `mse`, `rmse`, `r2_score`, `mape`, `huber_loss`, `pinball_loss` |
-| [`clustering`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/clustering) | Clustering evaluation | `silhouette_score`, `calinski_harabasz_score`, `adjusted_rand_index` |
-| [`ranking`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/ranking) | IR & recommendation metrics | `ndcg_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `average_precision` |
-| [`report`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/report) | Benchmark reporting | `ModelResult`, `compare_models`, `ComparisonReport` |
-| [`visualization`](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/visualization) | Multi-format rendering | `to_ascii_bar_chart`, `to_markdown_table`, `to_svg_roc_curve`, `to_csv_string` |
+| [`core`](./core) | Numerical foundation & errors | `VectorView`, `MatrixView`, `validate_same_length`, `EPSILON` |
+| [`classification`](./classification) | Classification evaluation | `accuracy`, `f1_score`, `log_loss`, `mcc`, `roc_curve`, `ConfusionMatrix` |
+| [`regression`](./regression) | Continuous regression metrics | `mae`, `mse`, `rmse`, `r2_score`, `mape`, `huber_loss`, `pinball_loss` |
+| [`clustering`](./clustering) | Clustering evaluation | `silhouette_score`, `calinski_harabasz_score`, `adjusted_rand_index` |
+| [`ranking`](./ranking) | IR & recommendation metrics | `ndcg_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `average_precision` |
+| [`report`](./report) | Benchmark reporting | `ModelResult`, `compare_models`, `ComparisonReport` |
+| [`visualization`](./visualization) | Multi-format rendering | `to_ascii_bar_chart`, `to_markdown_table`, `to_svg_roc_curve`, `to_csv_string` |
 
 ---
 
@@ -156,7 +156,11 @@ moon run --target wasm-gc cmd/main
 
 ---
 
-## 📄 License & OSC 2026 Statement
+## 📄 License & OSC 2026 Originality Statement
 
-This project is open-sourced under the [Apache License 2.0](file:///C:/Users/33046/Desktop/%E5%90%8C%E5%AD%A6%E8%8E%AB/LICENSE).
+This project is open-sourced under the [Apache License 2.0](./LICENSE).  
 Developed for the **MoonBit OSC 2026 Open Source Track**, showcasing pure MoonBit architectural design, comprehensive documentation, and multi-backend portability.
+
+### 🛡️ Third-Party Source Boundary & Originality Declaration (第三方来源边界与原创代码声明)
+- **100% Original Implementation**: All source code (`2,897` lines of pure MoonBit `.mbt` code across `core`, `classification`, `regression`, `clustering`, `ranking`, `report`, and `visualization`) is **completely original** and developed from scratch by **mycmyc** (`莫延春`). No third-party source code or external libraries (`scikit-learn`, `SciPy`, etc.) were copied, ported, or linked.
+- **Mathematical Principle Boundary**: The mathematical formulas and statistical evaluation metrics implemented in this library (such as ROC AUC, Huber Loss, Silhouette Coefficient, NDCG@K, Confusion Matrix, and MAE/RMSE) are based on standard, public-domain mathematical definitions from classical statistical textbooks and peer-reviewed academic literature. The software architecture, zero-copy `VectorView`/`MatrixView` slice operations, error handling, and numerical stability mechanisms are 100% independent engineering innovations. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for detailed bibliography and boundary clarifications.

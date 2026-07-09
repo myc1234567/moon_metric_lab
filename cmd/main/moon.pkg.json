@@ -1,11 +1,11 @@
 {
   "is-main": true,
   "import": [
-    "username/moon_metric_lab/classification",
-    "username/moon_metric_lab/regression",
-    "username/moon_metric_lab/clustering",
-    "username/moon_metric_lab/ranking",
-    "username/moon_metric_lab/report",
-    "username/moon_metric_lab/visualization"
+    "mycmyc/moon_metric_lab/classification",
+    "mycmyc/moon_metric_lab/regression",
+    "mycmyc/moon_metric_lab/clustering",
+    "mycmyc/moon_metric_lab/ranking",
+    "mycmyc/moon_metric_lab/report",
+    "mycmyc/moon_metric_lab/visualization"
   ]
 }

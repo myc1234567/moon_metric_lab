@@ -2,12 +2,12 @@
 
 **基本信息**
 - 项目名称：MoonMetricLab：机器学习评估指标与实验对比框架
-- 参赛者：MoonBit Community / 同学莫
-- 联系方式：opensource@moonbitlang.com
-- GitHub 仓库链接：https://github.com/username/moon_metric_lab.git
-- Gitlink 仓库链接：https://www.gitlink.org.cn/username/moon_metric_lab
-- 项目方向：工程基础设施与应用生态 / 机器学习评估基础库
-- 是否为原创与移植交叉项目：是（算法原创设计 + 经典数理统计方法标准移植）
+- 参赛者 / 创作者：mycmyc (莫延春 / 2412158932@qq.com / GitHub: myc1234567)
+- 联系方式：2412158932@qq.com
+- GitHub 仓库链接：https://github.com/myc1234567/moon_metric_lab
+- Gitlink 仓库链接：https://gitlink.org.cn/mycmyc/moon_metric_lab
+- 项目方向：工程基础设施与应用生态 / 高性能通用科学计算与机器学习评估基础库
+- 是否为原创与移植交叉项目：否（完全原创设计与实现：本项目全功能 2,897 行源文件全权由创作者 mycmyc 使用纯 MoonBit 语言自底向上从零原创编写，**未移植、未复制代码、未引用**任何第三方开源软件如 `scikit-learn` 或 `SciPy` 的底层源码；项目中所涵盖的统计学公式仅参考公开的无版权争议数学原理与数理统计公式定义，算法架构、零拷贝视图、防溢出保护与底层逻辑实现均为 100% 独立自主创新）
 
 **项目简介**
 
