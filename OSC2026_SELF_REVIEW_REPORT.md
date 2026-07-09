@@ -2,7 +2,10 @@
 
 **项目名称**：`MoonMetricLab` (机器学习评估指标与实验对比框架)  
 **开源参赛赛道**：Track 1 (MoonBit 基础生态库 / 高性能通用科学计算库)  
-**自查指引**：依据 `osc2026-guide` (MoonBit国产开源生态大赛 2026 参赛指南) 严格逐项检验与审核。
+**项目作者与唯一贡献者**：`mycmyc` (`2412158932@qq.com` / GitHub: `myc1234567`)  
+**GitLink 官方参赛仓库**：[https://gitlink.org.cn/mycmyc/moon_metric_lab](https://gitlink.org.cn/mycmyc/moon_metric_lab)  
+**GitHub 官方镜像仓库**：[https://github.com/myc1234567/moon_metric_lab](https://github.com/myc1234567/moon_metric_lab)  
+**自查指引**：依据 `osc2026-guide` (MoonBit国产开源生态大赛 2026 参赛指南) 与组委会评审反馈严格逐项检验、全面完善与复核。
 
 ---
 
@@ -75,9 +78,13 @@ moon_metric_lab (C:\Users\33046\Desktop\同学莫)
 
 ---
 
-## 五、 Git 提交历史评审 (Commit History Verification)
+## 五、 Git 提交历史与贡献者归属评审 (Commit History & Contributor Audit)
 
-遵循 Conventional Commits 规范，按照研发逻辑演进分为 17 个由浅入深、原子化、结构严谨的提交记录：
+**组委会驳回意见响应（重点核查）**：
+- **有效提交次数**：全仓累计 **18 次** 高质量原子提交（远大于组委会要求的基本提交次数 >10 次）。
+- **贡献者归属证明**：每一条提交的 Author 与 Committer 均 100% 绑定为项目创作者本人 `mycmyc <2412158932@qq.com>`，确保 GitLink 和 GitHub 贡献图谱完美识别，解决此前因贡献者邮箱或账户匹配不当导致的“两个仓库提交不足/归属不清”问题。
+
+遵循 Conventional Commits 规范，按照研发逻辑演进分为由浅入深、结构严谨的提交记录：
 
 1. `b97ae2c` `build: initialize project structure with moon.mod, spec.mbt and OSI Apache-2.0 license`
 2. `9d539a6` `docs: add comprehensive OSC 2026 proposal (PROPOSAL.md) and contribution guidelines`

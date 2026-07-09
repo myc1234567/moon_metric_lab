@@ -4,6 +4,8 @@
 [![MoonBit Version](https://img.shields.io/badge/MoonBit-2.0+-purple.svg)](https://www.moonbitlang.com)
 [![Targets](https://img.shields.io/badge/Targets-Wasm%20%7C%20JS%20%7C%20Native-brightgreen.svg)]()
 [![OSC 2026](https://img.shields.io/badge/OSC%202026-Contest%20Entry-gold.svg)](https://www.gitlink.org.cn/competitions/track1_2026MoonBit)
+[![GitLink Repo](https://img.shields.io/badge/GitLink-mycmyc%2Fmoon__metric__lab-blue?logo=git)](https://gitlink.org.cn/mycmyc/moon_metric_lab)
+[![GitHub Mirror](https://img.shields.io/badge/GitHub-myc1234567%2Fmoon__metric__lab-black?logo=github)](https://github.com/myc1234567/moon_metric_lab)
 
 **MoonMetricLab** is a high-performance, pure MoonBit evaluation suite and benchmark comparison framework tailored for machine learning models and experiments. Built from the ground up using zero-copy views and cross-platform numerical stability guarantees, it empowers developers and data scientists to evaluate, compare, and visualize machine learning pipelines across **Wasm-GC**, **Wasm**, **JavaScript**, and **Native** targets without external dependencies.
 
