@@ -1,0 +1,7 @@
+{
+  "is-main": true,
+  "import": [
+    "username/moon_metric_lab/classification",
+    "username/moon_metric_lab/visualization"
+  ]
+}
