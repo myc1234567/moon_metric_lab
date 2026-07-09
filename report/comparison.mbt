@@ -1,6 +1,6 @@
 ///|
 /// Delta comparison statistics between a baseline model and a candidate model for a specific metric.
-pub struct MetricDelta {
+pub(all) struct MetricDelta {
   metric_name : String
   baseline_value : Double
   candidate_value : Double
@@ -11,7 +11,7 @@ pub struct MetricDelta {
 
 ///|
 /// Comprehensive comparison report between two model runs.
-pub struct ComparisonReport {
+pub(all) struct ComparisonReport {
   baseline_name : String
   candidate_name : String
   task_type : String

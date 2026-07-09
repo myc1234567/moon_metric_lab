@@ -1,6 +1,6 @@
 ///|
 /// Core error types for the `MoonMetricLab` evaluation framework.
-pub suberror MetricError {
+pub(all) suberror MetricError {
   DimensionMismatch(expected~ : Int, actual~ : Int)
   EmptyInput(message~ : String)
   ZeroDivision(message~ : String)

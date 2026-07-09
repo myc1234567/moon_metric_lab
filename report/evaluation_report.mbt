@@ -1,6 +1,6 @@
 ///|
 /// A structured evaluation report for a single model run recording multiple metrics and hyperparameter metadata.
-pub struct ModelResult {
+pub(all) struct ModelResult {
   model_name : String
   task_type : String
   metrics : Map[String, Double]
