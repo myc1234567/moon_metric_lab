@@ -1,0 +1,36 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/regression"
+
+import {
+  "username/moon_metric_lab/core",
+}
+
+// Values
+pub fn explained_variance_score(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn huber_loss(Array[Double], Array[Double], delta? : Double) -> Double raise @core.MetricError
+
+pub fn log_cosh_loss(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn mae(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn mape(Array[Double], Array[Double], epsilon? : Double) -> Double raise @core.MetricError
+
+pub fn max_error(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn mse(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn pinball_loss(Array[Double], Array[Double], alpha? : Double) -> Double raise @core.MetricError
+
+pub fn r2_score(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn rmse(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

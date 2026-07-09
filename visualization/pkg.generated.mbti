@@ -1,0 +1,28 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/visualization"
+
+import {
+  "username/moon_metric_lab/report",
+}
+
+// Values
+pub fn to_ascii_bar_chart(Map[String, Double], max_width? : Int) -> String
+
+pub fn to_csv_string(@report.ComparisonReport) -> String
+
+pub fn to_json_string(@report.ModelResult) -> String
+
+pub fn to_markdown_comparison(@report.ComparisonReport) -> String
+
+pub fn to_markdown_table(@report.ModelResult) -> String
+
+pub fn to_svg_roc_curve(Array[Double], Array[Double], Double, width? : Int, height? : Int) -> String
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

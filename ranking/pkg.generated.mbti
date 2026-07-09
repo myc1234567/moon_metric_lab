@@ -1,0 +1,28 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/ranking"
+
+import {
+  "username/moon_metric_lab/core",
+}
+
+// Values
+pub fn average_precision(Array[Int], Array[Double], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn dcg_at_k(Array[Double], k? : Int) -> Double raise @core.MetricError
+
+pub fn mean_average_precision(Array[Array[Int]], Array[Array[Double]], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn mean_reciprocal_rank(Array[Array[Double]], Array[Array[Double]], threshold? : Double) -> Double raise @core.MetricError
+
+pub fn ndcg_at_k(Array[Double], Array[Double], k? : Int) -> Double raise @core.MetricError
+
+pub fn reciprocal_rank(Array[Double], Array[Double], threshold? : Double) -> Double raise @core.MetricError
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,30 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/clustering"
+
+import {
+  "username/moon_metric_lab/core",
+}
+
+// Values
+pub fn adjusted_rand_index(Array[Int], Array[Int]) -> Double raise @core.MetricError
+
+pub fn calinski_harabasz_score(Array[Array[Double]], Array[Int]) -> Double raise @core.MetricError
+
+pub fn davies_bouldin_score(Array[Array[Double]], Array[Int]) -> Double raise @core.MetricError
+
+pub fn euclidean_distance(Array[Double], Array[Double]) -> Double raise @core.MetricError
+
+pub fn fowlkes_mallows_score(Array[Int], Array[Int]) -> Double raise @core.MetricError
+
+pub fn normalized_mutual_info(Array[Int], Array[Int], average_method? : String) -> Double raise @core.MetricError
+
+pub fn silhouette_score(Array[Array[Double]], Array[Int]) -> Double raise @core.MetricError
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

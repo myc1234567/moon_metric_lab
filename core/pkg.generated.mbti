@@ -1,0 +1,74 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/core"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub const EPSILON : Double = 1.0e-15
+
+pub fn argmax(Array[Double]) -> Int raise MetricError
+
+pub fn argsort(Array[Double]) -> Array[Int]
+
+pub fn mean(Array[Double]) -> Double raise MetricError
+
+pub fn safe_div(Double, Double, raise_on_zero? : Bool) -> Double raise MetricError
+
+pub fn safe_log(Double) -> Double
+
+pub fn std_dev(Array[Double], ddof? : Int) -> Double raise MetricError
+
+pub fn trapezoidal_area(Array[Double], Array[Double]) -> Double raise MetricError
+
+pub fn[T] validate_non_empty(Array[T], message? : String) -> Unit raise MetricError
+
+pub fn validate_probabilities(Array[Double]) -> Unit raise MetricError
+
+pub fn[T, U] validate_same_length(Array[T], Array[U]) -> Unit raise MetricError
+
+pub fn variance(Array[Double], ddof? : Int) -> Double raise MetricError
+
+pub fn weighted_mean(Array[Double], Array[Double]) -> Double raise MetricError
+
+// Errors
+pub(all) suberror MetricError {
+  DimensionMismatch(expected~ : Int, actual~ : Int)
+  EmptyInput(message~ : String)
+  ZeroDivision(message~ : String)
+  InvalidThreshold(threshold~ : Double)
+  InvalidProbability(prob~ : Double)
+  InvalidInput(message~ : String)
+} derive(Eq, @debug.Debug)
+pub fn MetricError::to_string(Self) -> String
+
+// Types and methods
+pub struct Matrix[T] {
+  data : Array[T]
+  rows : Int
+  cols : Int
+} derive(Eq, @debug.Debug)
+pub fn[T] Matrix::cols(Self[T]) -> Int
+pub fn[T] Matrix::from_2d_array(Array[Array[T]]) -> Self[T] raise MetricError
+pub fn[T] Matrix::get(Self[T], Int, Int) -> T raise MetricError
+pub fn[T] Matrix::new(Int, Int, T) -> Self[T] raise MetricError
+pub fn[T] Matrix::row_view(Self[T], Int) -> Vector[T] raise MetricError
+pub fn[T] Matrix::rows(Self[T]) -> Int
+pub fn[T] Matrix::set(Self[T], Int, Int, T) -> Unit raise MetricError
+
+pub struct Vector[T] {
+  data : Array[T]
+  start : Int
+  length : Int
+} derive(Eq, @debug.Debug)
+pub fn[T] Vector::from_array(Array[T]) -> Self[T]
+pub fn[T] Vector::get(Self[T], Int) -> T raise MetricError
+pub fn[T] Vector::length(Self[T]) -> Int
+pub fn[T] Vector::slice(Self[T], Int, Int) -> Self[T] raise MetricError
+pub fn[T] Vector::to_array(Self[T]) -> Array[T]
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,86 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/moon_metric_lab/classification"
+
+import {
+  "moonbitlang/core/debug",
+  "username/moon_metric_lab/core",
+}
+
+// Values
+pub fn accuracy(Array[Int], Array[Int]) -> Double raise @core.MetricError
+
+pub fn balanced_accuracy(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn brier_score_loss(Array[Int], Array[Double]) -> Double raise @core.MetricError
+
+pub fn f1_score(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn f_beta_score(Array[Int], Array[Int], beta? : Double, pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn find_optimal_threshold(Array[Int], Array[Double], metric? : String, pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn jaccard_score(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn log_loss(Array[Int], Array[Double]) -> Double raise @core.MetricError
+
+pub fn mcc(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn multiclass_accuracy(Array[Int], Array[Int]) -> Double raise @core.MetricError
+
+pub fn multiclass_f1_score(Array[Int], Array[Int], averaging? : AveragingMethod) -> Double raise @core.MetricError
+
+pub fn multiclass_log_loss(Array[Int], @core.Matrix[Double]) -> Double raise @core.MetricError
+
+pub fn multiclass_precision(Array[Int], Array[Int], averaging? : AveragingMethod) -> Double raise @core.MetricError
+
+pub fn multiclass_recall(Array[Int], Array[Int], averaging? : AveragingMethod) -> Double raise @core.MetricError
+
+pub fn precision(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn precision_recall_curve(Array[Int], Array[Double], pos_label? : Int) -> PrCurveResult raise @core.MetricError
+
+pub fn recall(Array[Int], Array[Int], pos_label? : Int) -> Double raise @core.MetricError
+
+pub fn roc_curve(Array[Int], Array[Double], pos_label? : Int) -> RocCurveResult raise @core.MetricError
+
+pub fn top_k_accuracy(Array[Int], @core.Matrix[Double], k? : Int) -> Double raise @core.MetricError
+
+// Errors
+
+// Types and methods
+pub(all) enum AveragingMethod {
+  Macro
+  Micro
+  Weighted
+} derive(Eq, @debug.Debug)
+
+pub struct ConfusionMatrix {
+  matrix : @core.Matrix[Int]
+  classes : Array[Int]
+} derive(Eq, @debug.Debug)
+pub fn ConfusionMatrix::classes(Self) -> Array[Int]
+pub fn ConfusionMatrix::from_predictions(Array[Int], Array[Int]) -> Self raise @core.MetricError
+pub fn ConfusionMatrix::from_probabilities(Array[Int], @core.Matrix[Double]) -> Self raise @core.MetricError
+pub fn ConfusionMatrix::get_tp_fp_fn_tn(Self, Int) -> (Int, Int, Int, Int) raise @core.MetricError
+pub fn ConfusionMatrix::matrix(Self) -> @core.Matrix[Int]
+pub fn ConfusionMatrix::normalized(Self, mode? : String) -> @core.Matrix[Double] raise @core.MetricError
+pub fn ConfusionMatrix::to_table_string(Self) -> String
+
+pub struct PrCurveResult {
+  precision_curve : Array[Double]
+  recall_curve : Array[Double]
+  thresholds : Array[Double]
+  auc : Double
+} derive(Eq, @debug.Debug)
+
+pub struct RocCurveResult {
+  fpr : Array[Double]
+  tpr : Array[Double]
+  thresholds : Array[Double]
+  auc : Double
+} derive(Eq, @debug.Debug)
+
+// Type aliases
+
+// Traits
+
