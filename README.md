@@ -57,7 +57,7 @@ Add `moon_metric_lab` as a dependency in your `moon.mod`:
 
 ```toml
 [deps]
-"myc1234567/moon_metric_lab" = "0.1.0"
+"myc1234567/moon_metric_lab" = "0.1.1"
 ```
 
 Then, you can import any sub-package (e.g., `core`, `classification`, `regression`, `hypothesis_testing`) in your `moon.pkg`:
