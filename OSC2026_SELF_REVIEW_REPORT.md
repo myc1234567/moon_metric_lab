@@ -3,7 +3,7 @@
 **项目名称**：`MoonMetricLab` (机器学习评估指标与实验对比框架)  
 **开源参赛赛道**：Track 1 (MoonBit 基础生态库 / 高性能通用科学计算库)  
 **项目作者与唯一贡献者**：`mycmyc` (`2412158932@qq.com` / GitHub: `myc1234567`)  
-**GitLink 官方参赛仓库**：[https://gitlink.org.cn/mycmyc/moon_metric_lab](https://gitlink.org.cn/mycmyc/moon_metric_lab)  
+**GitLink 官方参赛仓库**：[https://gitlink.org.cn/myc1234567/moon_metric_lab](https://gitlink.org.cn/myc1234567/moon_metric_lab)  
 **GitHub 官方镜像仓库**：[https://github.com/myc1234567/moon_metric_lab](https://github.com/myc1234567/moon_metric_lab)  
 **自查指引**：依据 `osc2026-guide` (MoonBit国产开源生态大赛 2026 参赛指南) 与组委会评审反馈严格逐项检验、全面完善与复核。
 
@@ -23,7 +23,7 @@
 ## 二、 仓库结构与工程规范评审 (Repository & Configuration)
 
 ```
-moon_metric_lab (mycmyc/moon_metric_lab)
+moon_metric_lab (myc1234567/moon_metric_lab)
 ├── moon.mod.json           # [合规] 根项目定义，指定 readme 为 README.mbt.md
 ├── spec.mbt                # [合规] 项目行为契约说明
 ├── LICENSE                 # [合规] OSI 认可的 Apache-2.0 开源许可证 (10KB 完整文本)

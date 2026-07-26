@@ -10,9 +10,9 @@
 | 申报项 | 内容说明 |
 | :--- | :--- |
 | **项目名称** | `MoonMetricLab`（机器学习评估指标与实验对比框架） |
-| **项目标识** | `moon_metric_lab` （包命名空间：`mycmyc/moon_metric_lab`） |
+| **项目标识** | `moon_metric_lab` （包命名空间：`myc1234567/moon_metric_lab`） |
 | **项目创作者 / 唯一贡献者** | **`mycmyc`** （电子邮箱：`2412158932@qq.com` ｜ GitHub：`myc1234567`） |
-| **GitLink 官方参赛仓库** | [https://gitlink.org.cn/mycmyc/moon_metric_lab](https://gitlink.org.cn/mycmyc/moon_metric_lab) |
+| **GitLink 官方参赛仓库** | [https://gitlink.org.cn/myc1234567/moon_metric_lab](https://gitlink.org.cn/myc1234567/moon_metric_lab) |
 | **GitHub 官方镜像仓库** | [https://github.com/myc1234567/moon_metric_lab](https://github.com/myc1234567/moon_metric_lab) |
 
 ---
@@ -33,7 +33,7 @@
 
 针对组委会近期评审提出的“**仓库内仍有 username 等占位信息、本地 C:/Users 链接、第三方来源边界未区分说明及提交次数贡献者要求**”的初审驳回意见，本项目已深度对标 `osc2026-guide` 规范，完成了全套严格整改：
 
-1. **全面肃清占位符与本地死链接**：将全仓所有 `moon.mod`、`moon.pkg`、`.mbti`、`PROPOSAL.md` 与 `README.md` 中的 `username/moon_metric_lab`、`MoonBit Community / 同学莫`、`http://PROPOSAL.md` 等占位信息彻底替换为真实准确的官方命名空间 `mycmyc/moon_metric_lab` 与创作者身份 (`mycmyc <2412158932@qq.com>`)；将所有 `file:///C:/Users/...` 本地死链接彻底修复为干净可跨平台跳转的相对路径 `./core`、`./LICENSE`。
+1. **全面肃清占位符与本地死链接**：将全仓所有 `moon.mod`、`moon.pkg`、`.mbti`、`PROPOSAL.md` 与 `README.md` 中的 `username/moon_metric_lab`、`MoonBit Community / 同学莫`、`http://PROPOSAL.md` 等占位信息彻底替换为真实准确的官方命名空间 `myc1234567/moon_metric_lab` 与创作者身份 (`mycmyc <2412158932@qq.com>`)；将所有 `file:///C:/Users/...` 本地死链接彻底修复为干净可跨平台跳转的相对路径 `./core`、`./LICENSE`。
 2. **第三方及数理公式来源边界严密厘清 (Originality & Mathematical Boundary)**：
    - **完全自主原创声明**：彻底修改并清晰界定，本项目全仓 2,897 行 `.mbt` 核心代码由创作者 `mycmyc` 使用纯 MoonBit 语言**自底向上独立原创编写**，绝未移植、复制或依赖任何第三方开源软件代码（如 `scikit-learn`、`SciPy` 等）。
    - **理论原理边界**：项目所实现的评估指标（ROC AUC、Huber 损失、Silhouette 轮廓系数、NDCG@K 等）仅属于参考公开无版权争议教科书与经典统计学文献的通用数学常识原理；其底层零拷贝切片视图 (`VectorView`/`MatrixView`)、防除零溢出机制、显式错误处理及可视化对弈框架**完全属于创作者本人独立自主的工程算法创新**（详见新增的根目录 [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) 专门声明文档）。
