@@ -1,7 +1,0 @@
-{
-  "is-main": true,
-  "import": [
-    "mycmyc/moon_metric_lab/classification",
-    "mycmyc/moon_metric_lab/visualization"
-  ]
-}

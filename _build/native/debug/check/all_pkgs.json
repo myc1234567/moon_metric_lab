@@ -383,52 +383,52 @@
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "classification",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\classification\\classification.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "clustering",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\clustering\\clustering.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "cmd/main",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\cmd\\main\\main.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "core",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\core\\core.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\core\\core.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "examples/binary_demo",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\examples\\binary_demo\\binary_demo.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "examples/comparison_demo",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\examples\\comparison_demo\\comparison_demo.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "ranking",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\ranking\\ranking.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "regression",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\regression\\regression.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "report",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\report\\report.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\report\\report.mi"
     },
     {
       "root": "mycmyc/moon_metric_lab",
       "rel": "visualization",
-      "artifact": "C:\\Users\\33046\\Desktop\\擒龙抄拉\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi"
+      "artifact": "C:\\Users\\33046\\Desktop\\moobit\\同学莫\\_build\\native\\debug\\check\\visualization\\visualization.mi"
     }
   ]
 }
