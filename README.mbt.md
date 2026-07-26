@@ -47,10 +47,37 @@ myc1234567/moon_metric_lab
 | [`ranking`](./ranking) | IR & recommendation metrics | `ndcg_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `average_precision` |
 | [`report`](./report) | Benchmark reporting | `ModelResult`, `compare_models`, `ComparisonReport` |
 | [`visualization`](./visualization) | Multi-format rendering | `to_ascii_bar_chart`, `to_markdown_table`, `to_svg_roc_curve`, `to_csv_string` |
+| [`hypothesis_testing`](./hypothesis_testing) | Multi-fold statistics & significance comparison | `aggregate_folds_mean`, `welch_t_test` |
 
 ---
 
-## ⚡ Quick Start & Usage Examples
+## 📦 Installation & Dependency Integration
+
+Add `moon_metric_lab` as a dependency in your `moon.mod`:
+
+```toml
+[deps]
+"myc1234567/moon_metric_lab" = "0.1.0"
+```
+
+Then, you can import any sub-package (e.g., `core`, `classification`, `regression`, `hypothesis_testing`) in your `moon.pkg`:
+
+```
+import {
+  "myc1234567/moon_metric_lab/classification"
+  "myc1234567/moon_metric_lab/hypothesis_testing"
+}
+```
+
+Or via the `moon` command-line tool:
+
+```bash
+moon add myc1234567/moon_metric_lab
+```
+
+---
+
+## 💡 Quick Start & Usage Examples
 
 ### 1. Binary & Multi-Class Classification
 

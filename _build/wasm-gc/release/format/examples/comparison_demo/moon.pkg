@@ -1,0 +1,8 @@
+import {
+  "myc1234567/moon_metric_lab/report",
+  "myc1234567/moon_metric_lab/visualization",
+}
+
+options(
+  "is-main": true,
+)
