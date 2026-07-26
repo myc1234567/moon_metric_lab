@@ -1,8 +1,0 @@
-import {
-  "mycmyc/moon_metric_lab/classification",
-  "mycmyc/moon_metric_lab/visualization",
-}
-
-options(
-  "is-main": true,
-)

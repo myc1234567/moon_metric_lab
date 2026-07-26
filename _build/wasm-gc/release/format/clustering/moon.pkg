@@ -1,5 +1,0 @@
-import {
-  "mycmyc/moon_metric_lab/core",
-  "moonbitlang/core/math",
-  "moonbitlang/core/double",
-}

@@ -1,4 +1,0 @@
-import {
-  "mycmyc/moon_metric_lab/core",
-  "mycmyc/moon_metric_lab/report",
-}
