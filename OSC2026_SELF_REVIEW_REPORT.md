@@ -27,7 +27,7 @@
 | 格式与接口 | `moon fmt --check`、`moon info`、`git diff --exit-code -- '**/pkg.generated.mbti'` | 通过 |
 | CLI 工作链 | `moon run --target wasm-gc cmd/main` 输出四折聚合、对比、质量门禁、Markdown 报告和 `Deployment ready: true` | 通过 |
 | 示例工作链 | `examples/binary_demo`、`examples/comparison_demo` 均可运行 | 通过 |
-| 代码规模 | 4,466 行有效 MoonBit 源码，排除生成接口和构建产物；54 个测试声明 | 通过 |
+| 代码规模 | 4,525 行有效 MoonBit 源码，排除生成接口和构建产物；54 个测试声明 | 通过 |
 | 许可证 | 根目录 `LICENSE` 为 Apache-2.0，来源边界见 `THIRD_PARTY_NOTICES.md` | 通过 |
 | 数据边界 | `BENCHMARKS.md` 记录 UCI/LETOR 来源、紧凑夹具和不再分发原始数据的约束 | 通过 |
 | 构建产物 | `.gitignore` 忽略 `_build/`，`git ls-files` 检查跟踪数量为 0 | 通过 |
