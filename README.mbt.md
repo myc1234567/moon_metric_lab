@@ -17,6 +17,7 @@
 - **🚀 Zero-Copy Data Handling**: Lightweight `VectorView` and `MatrixView` abstractions enable zero-copy slicing, windowing, and high-speed statistical operations over contiguous double and integer buffers.
 - **🛡️ Checked Numerical Stability boundaries**: Strict division-by-zero protection (`EPSILON` guards), underflow/overflow prevention (`log_cosh` and log-loss clipping), and granular structured errors (`raise @core.MetricError`) instead of ungraceful panics.
 - **📈 Benchmark Comparison & Report Engine**: Automated candidate vs. baseline comparison reports computing absolute deltas, percentage shifts, and automatic improvement/degradation detection.
+- **✅ Release-Ready Experiment Workflow**: Aggregate cross-fold metrics, rank models, enforce minimum/maximum/stability gates, and export deployment evidence as Markdown or CSV.
 - **🎨 Multi-Format Visualization Suite**: Built-in ASCII terminal bar charts, GitHub-flavored Markdown tables, self-contained SVG curve generators (`to_svg_roc_curve`), and dependency-free JSON/CSV exporters.
 
 ---
@@ -34,6 +35,7 @@ myc1234567/moon_metric_lab
 ├── ranking         # Information retrieval ranking metrics (DCG@K, NDCG@K, MRR, MAP)
 ├── report          # Evaluation containers and automated candidate vs. baseline comparison engine
 ├── visualization   # ASCII bar charts, Markdown tables, SVG curve plots, and JSON/CSV exporters
+├── workflow        # Cross-fold aggregation, model ranking, quality gates, and deployment reports
 ├── cmd/main        # Standalone CLI showcase executable demonstrator
 └── examples        # Runnable demo projects (binary_demo, comparison_demo)
 ```
@@ -48,6 +50,7 @@ myc1234567/moon_metric_lab
 | [`report`](./report) | Benchmark reporting | `ModelResult`, `compare_models`, `ComparisonReport` |
 | [`visualization`](./visualization) | Multi-format rendering | `to_ascii_bar_chart`, `to_markdown_table`, `to_svg_roc_curve`, `to_csv_string` |
 | [`hypothesis_testing`](./hypothesis_testing) | Multi-fold statistics, significance comparison and effect sizes | `aggregate_folds_mean`, `welch_t_test`, `paired_mean_difference`, `standard_error`, `cohens_d` |
+| [`workflow`](./workflow) | Reproducible experiment-to-release workflow | `summarize`, `compare`, `rank`, `evaluate_gate`, `deployment_report` |
 
 ---
 
@@ -57,22 +60,23 @@ Add `moon_metric_lab` as a dependency in your `moon.mod`:
 
 ```toml
 [deps]
-"myc1234567/moon_metric_lab" = "0.1.2"
+"myc1234567/moon_metric_lab" = "0.1.3"
 ```
 
-Then, you can import any sub-package (e.g., `core`, `classification`, `regression`, `hypothesis_testing`) in your `moon.pkg`:
+Then, you can import any sub-package (e.g., `core`, `classification`, `regression`, `hypothesis_testing`, `workflow`) in your `moon.pkg`:
 
 ```
 import {
   "myc1234567/moon_metric_lab/classification"
   "myc1234567/moon_metric_lab/hypothesis_testing"
+  "myc1234567/moon_metric_lab/workflow"
 }
 ```
 
 Or via the `moon` command-line tool:
 
 ```bash
-moon add myc1234567/moon_metric_lab@0.1.2
+moon add myc1234567/moon_metric_lab@0.1.3
 ```
 
 After adding the dependency, import the package path you use in `moon.pkg`. The public API is described by the tracked `pkg.generated.mbti` files, so consumers can inspect signatures without reading implementation files.
@@ -176,6 +180,34 @@ test "README significance demo" {
 }
 ```
 
+### 7. Cross-fold evaluation to a deployment decision
+
+The `workflow` package is the complete application-facing chain: record fold-level
+results, aggregate mean/stddev/min/max, compare a baseline with a candidate, apply
+release rules, and export review evidence. The fixture metadata is intentionally
+explicit so an external data run can be reproduced without redistributing the
+original UCI or LETOR files.
+
+```mbt check
+test "README release workflow demo" {
+  let candidate = @workflow.Experiment::new("calibrated-model", "classification")
+  candidate.add_metadata("dataset", "UCI Breast Cancer Wisconsin")
+  for i, auc in [0.94, 0.95, 0.93, 0.94] {
+    let fold = @workflow.FoldObservation::new(i + 1)
+    fold.add_metric("roc_auc", auc)
+    fold.add_metric("log_loss", 1.0 - auc)
+    candidate.add_fold(fold)
+  }
+  let summary = @workflow.summarize(candidate)
+  let gate = @workflow.evaluate_gate(summary, "production-v1", [
+    @workflow.GateRule::new("roc_auc").with_minimum(0.92),
+    @workflow.GateRule::new("log_loss").with_maximum(0.10),
+  ])
+  inspect!(gate.is_passed(), content="true")
+  inspect!(@workflow.summary_to_markdown(summary).contains("roc_auc"), content="true")
+}
+```
+
 ---
 
 ## 🛠️ Tooling & Commands
@@ -213,5 +245,5 @@ This project is open-sourced under the [Apache License 2.0](./LICENSE).
 Developed for the **MoonBit OSC 2026 Open Source Track**, showcasing pure MoonBit architectural design, comprehensive documentation, and multi-backend portability.
 
 ### 🛡️ Third-Party Source Boundary & Originality Declaration (第三方来源边界与原创代码声明)
-- **Original implementation scope**: The repository currently contains **3,100+ effective lines** of MoonBit source (excluding generated interfaces and build artifacts), including the `hypothesis_testing` package and its boundary tests. The implementation is authored in this repository; external dataset rights remain with their respective providers.
+- **Original implementation scope**: The repository currently contains **4,400+ effective lines** of MoonBit source (excluding generated interfaces and build artifacts), including the `hypothesis_testing` and `workflow` packages and their boundary/fixture tests. The implementation is authored in this repository; external dataset rights remain with their respective providers.
 - **Mathematical principle boundary**: The metrics implemented here (ROC AUC, Huber Loss, Silhouette, NDCG@K, Confusion Matrix, MAE/RMSE and others) follow standard mathematical definitions. The repository's data structures, error handling, numerical validation and multi-format rendering are implemented as MoonBit engineering in this project. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for the source and license boundary.

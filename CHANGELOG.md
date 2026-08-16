@@ -4,6 +4,18 @@ All notable changes to the `MoonMetricLab` project will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-08-16
+
+### Added
+- Production-facing `workflow` package for fold aggregation, metric-direction-aware baseline/candidate comparison, deterministic model ranking, quality gates, deployment decisions, Markdown evidence, and CSV exports.
+- Real-task-shaped fixture tests for UCI Breast Cancer Wisconsin classification, UCI Iris multiclass classification, UCI Wine Quality regression, and LETOR MQ2008 ranking.
+- CLI showcase section demonstrating a four-fold evaluation from experiment records to a deployment-ready decision.
+- Effective MoonBit source scale increased beyond 4,400 lines without adding generated interfaces or build artifacts.
+
+### Fixed
+- Deterministic tie-breaking now uses MoonBit lexical string comparison.
+- CSV headers quote the complete metric field name, preserving valid comma-separated output.
+
 ## [0.1.2] - 2026-08-16
 
 ### Added

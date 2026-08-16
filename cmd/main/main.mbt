@@ -5,7 +5,7 @@ fn main {
     "=========================================================================",
   )
   println(
-    "        MoonMetricLab v0.1.0 - Machine Learning Metric Suite             ",
+    "        MoonMetricLab v0.1.3 - Machine Learning Metric Suite             ",
   )
   println(
     "=========================================================================\n",
@@ -83,6 +83,65 @@ fn main {
     println("NDCG@5: " + ndcg.to_string() + "\n")
   } catch {
     e => println("Ranking error: " + e.to_string())
+  }
+
+  // 5. Production evaluation workflow
+  println("--- [5] Cross-Fold Quality Gate & Deployment Report ---")
+  try {
+    let baseline = @workflow.Experiment::new(
+      "logistic-baseline", "classification",
+    )
+    baseline.add_metadata(
+      "dataset", "UCI Breast Cancer Wisconsin compact fixture",
+    )
+    baseline.add_metadata("split", "stratified-4-fold")
+    for
+      i, values in [
+        [0.90, 0.86, 0.30],
+        [0.91, 0.87, 0.29],
+        [0.90, 0.85, 0.31],
+        [0.92, 0.86, 0.30],
+      ] {
+      let fold = @workflow.FoldObservation::new(i + 1)
+      fold.add_metric("roc_auc", values[0])
+      fold.add_metric("f1_score", values[1])
+      fold.add_metric("log_loss", values[2])
+      baseline.add_fold(fold)
+    }
+    let candidate = @workflow.Experiment::new(
+      "calibrated-candidate", "classification",
+    )
+    candidate.add_metadata(
+      "dataset", "UCI Breast Cancer Wisconsin compact fixture",
+    )
+    candidate.add_metadata("split", "stratified-4-fold")
+    for
+      i, values in [
+        [0.94, 0.90, 0.22],
+        [0.95, 0.91, 0.21],
+        [0.93, 0.89, 0.23],
+        [0.94, 0.90, 0.22],
+      ] {
+      let fold = @workflow.FoldObservation::new(i + 1)
+      fold.add_metric("roc_auc", values[0])
+      fold.add_metric("f1_score", values[1])
+      fold.add_metric("log_loss", values[2])
+      candidate.add_fold(fold)
+    }
+    let baseline_summary = @workflow.summarize(baseline)
+    let candidate_summary = @workflow.summarize(candidate)
+    let comparison = @workflow.compare(baseline_summary, candidate_summary)
+    let gate = @workflow.evaluate_gate(candidate_summary, "production-v1", [
+      @workflow.GateRule::new("roc_auc")
+      .with_minimum(0.93)
+      .with_maximum_stddev(0.01),
+      @workflow.GateRule::new("log_loss").with_maximum(0.25),
+    ])
+    let ready = @workflow.deployment_ready(comparison, gate, ["roc_auc"])
+    println(@workflow.deployment_report(candidate_summary, comparison, gate))
+    println("Deployment ready: " + ready.to_string() + "\n")
+  } catch {
+    e => println("Workflow error: " + e.to_string())
   }
 
   println("Showcase run complete!")

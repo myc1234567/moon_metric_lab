@@ -5,6 +5,7 @@ import {
   "myc1234567/moon_metric_lab/ranking",
   "myc1234567/moon_metric_lab/report",
   "myc1234567/moon_metric_lab/visualization",
+  "myc1234567/moon_metric_lab/workflow",
 }
 
 pkgtype(kind: "executable")

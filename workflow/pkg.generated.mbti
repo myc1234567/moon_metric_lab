@@ -1,0 +1,143 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "myc1234567/moon_metric_lab/workflow"
+
+import {
+  "moonbitlang/core/debug",
+  "myc1234567/moon_metric_lab/core",
+}
+
+// Values
+pub fn compare(ExperimentSummary, ExperimentSummary, specs? : Array[MetricSpec]) -> ExperimentComparison raise @core.MetricError
+
+pub fn comparison_to_markdown(ExperimentComparison) -> String
+
+pub fn deployment_ready(ExperimentComparison, QualityGate, Array[String]) -> Bool
+
+pub fn deployment_report(ExperimentSummary, ExperimentComparison, QualityGate) -> String
+
+pub fn direction_for_metric(String) -> MetricDirection
+
+pub fn evaluate_gate(ExperimentSummary, String, Array[GateRule]) -> QualityGate raise @core.MetricError
+
+pub fn gate_to_markdown(QualityGate) -> String
+
+pub fn rank(Array[ExperimentSummary], String, MetricDirection) -> Array[RankedExperiment] raise @core.MetricError
+
+pub fn summaries_to_csv(Array[ExperimentSummary], Array[String]) -> String raise @core.MetricError
+
+pub fn summarize(Experiment) -> ExperimentSummary raise @core.MetricError
+
+pub fn summary_to_markdown(ExperimentSummary) -> String
+
+pub fn validate_experiment(Experiment) -> Unit raise @core.MetricError
+
+// Errors
+
+// Types and methods
+pub(all) struct AggregateMetric {
+  name : String
+  mean : Double
+  stddev : Double
+  minimum : Double
+  maximum : Double
+  count : Int
+} derive(Eq, @debug.Debug)
+
+pub(all) struct ComparisonRow {
+  metric_name : String
+  baseline_mean : Double
+  candidate_mean : Double
+  delta : Double
+  relative_delta : Double
+  candidate_better : Bool
+  direction : MetricDirection
+} derive(Eq, @debug.Debug)
+
+pub(all) struct Experiment {
+  model_name : String
+  task_type : String
+  folds : Array[FoldObservation]
+  metadata : Map[String, String]
+} derive(Eq, @debug.Debug)
+pub fn Experiment::add_fold(Self, FoldObservation) -> Unit raise @core.MetricError
+pub fn Experiment::add_metadata(Self, String, String) -> Unit raise @core.MetricError
+pub fn Experiment::fold_count(Self) -> Int
+pub fn Experiment::model_name(Self) -> String
+pub fn Experiment::new(String, String) -> Self
+pub fn Experiment::task_type(Self) -> String
+
+pub(all) struct ExperimentComparison {
+  baseline_name : String
+  candidate_name : String
+  task_type : String
+  rows : Array[ComparisonRow]
+} derive(Eq, @debug.Debug)
+
+pub(all) struct ExperimentSummary {
+  model_name : String
+  task_type : String
+  fold_count : Int
+  metrics : Array[AggregateMetric]
+  metadata : Map[String, String]
+} derive(Eq, @debug.Debug)
+pub fn ExperimentSummary::get_metric(Self, String) -> AggregateMetric?
+pub fn ExperimentSummary::metric_names(Self) -> Array[String]
+
+pub(all) struct FoldObservation {
+  fold_id : Int
+  metrics : Map[String, Double]
+} derive(Eq, @debug.Debug)
+pub fn FoldObservation::add_metric(Self, String, Double) -> Unit raise @core.MetricError
+pub fn FoldObservation::fold_id(Self) -> Int
+pub fn FoldObservation::get_metric(Self, String) -> Double?
+pub fn FoldObservation::metric_names(Self) -> Array[String]
+pub fn FoldObservation::new(Int) -> Self
+
+pub(all) struct GateFailure {
+  metric_name : String
+  observed : Double
+  reason : String
+} derive(Eq, @debug.Debug)
+
+pub(all) struct GateRule {
+  metric_name : String
+  minimum : Double?
+  maximum : Double?
+  maximum_stddev : Double?
+} derive(Eq, @debug.Debug)
+pub fn GateRule::new(String) -> Self
+pub fn GateRule::with_maximum(Self, Double) -> Self
+pub fn GateRule::with_maximum_stddev(Self, Double) -> Self
+pub fn GateRule::with_minimum(Self, Double) -> Self
+
+pub(all) enum MetricDirection {
+  HigherIsBetter
+  LowerIsBetter
+} derive(Eq, @debug.Debug)
+
+pub(all) struct MetricSpec {
+  name : String
+  direction : MetricDirection
+} derive(Eq, @debug.Debug)
+pub fn MetricSpec::direction(Self) -> MetricDirection
+pub fn MetricSpec::name(Self) -> String
+pub fn MetricSpec::new(String, MetricDirection) -> Self
+
+pub(all) struct QualityGate {
+  gate_name : String
+  passed : Bool
+  failures : Array[GateFailure]
+} derive(Eq, @debug.Debug)
+pub fn QualityGate::failure_count(Self) -> Int
+pub fn QualityGate::is_passed(Self) -> Bool
+
+pub(all) struct RankedExperiment {
+  rank : Int
+  model_name : String
+  score : Double
+  fold_count : Int
+} derive(Eq, @debug.Debug)
+
+// Type aliases
+
+// Traits
