@@ -6,7 +6,7 @@ This document explicitly defines the boundaries between original software engine
 
 ## 1. Original Implementation Declaration (原创实现声明)
 
-- **Original Authorship**: The `MoonMetricLab` project currently contains `3,134` effective lines of MoonBit source, excluding generated interfaces and build artifacts. The implementation is authored in this repository by **mycmyc** (`莫延春`, `2412158932@qq.com`, GitHub: `myc1234567`). External dataset rights are not claimed by this project.
+- **Original Authorship**: The `MoonMetricLab` project currently contains `3,100+` effective lines of MoonBit source, excluding generated interfaces and build artifacts. The implementation is authored in this repository by **mycmyc** (`莫延春`, `2412158932@qq.com`, GitHub: `myc1234567`). External dataset rights are not claimed by this project.
 - **No Third-Party Software Code Copied or Ported**: The project implementation was written in this repository and does not intentionally copy or port source files from external libraries. The named projects are reference points for mathematical terminology only, not runtime dependencies.
 - **Zero External Dependencies**: The repository relies solely on MoonBit 2.0 standard core primitives (`moonbitlang/core/math` and `moonbitlang/core/double`).
 

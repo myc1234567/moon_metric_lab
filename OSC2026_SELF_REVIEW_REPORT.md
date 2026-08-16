@@ -25,7 +25,7 @@
 | Wasm 测试 | `moon test --target wasm --deny-warn`，43/43 | 通过 |
 | 格式与接口 | `moon fmt --check`、`moon info`、生成接口已更新 | 通过 |
 | 运行示例 | `moon run --target wasm-gc cmd/main` | 通过 |
-| 代码规模 | 3,134 行有效 MoonBit 源码，排除生成接口和构建产物 | 达标参考 |
+| 代码规模 | 3,100+ 行有效 MoonBit 源码，排除生成接口和构建产物 | 达标参考 |
 | 许可证 | 根目录 `LICENSE` 为 Apache-2.0，来源边界见 `THIRD_PARTY_NOTICES.md` | 通过 |
 | 数据边界 | `BENCHMARKS.md` 记录公开数据集来源、缩减样例和不再分发原始数据的约束 | 通过 |
 | 构建产物 | `.gitignore` 忽略 `_build/`，已从 Git 跟踪集合移除 | 通过 |
