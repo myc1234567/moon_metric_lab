@@ -23,7 +23,7 @@
 | 严格编译 | `moon check --deny-warn`；本地 `moon check --target all --deny-warn` | 通过 |
 | Wasm-GC 测试 | `moon test --target wasm-gc --deny-warn`，54/54 | 通过 |
 | Wasm 测试 | `moon test --target wasm --deny-warn`，54/54 | 通过 |
-| JS/Native CI | GitHub Actions run #9 的 Ubuntu、macOS、Windows 矩阵任务均 success | 通过 |
+| JS/Native CI | GitHub Actions run #10 的 Ubuntu、macOS、Windows 矩阵任务均 success | 通过 |
 | 格式与接口 | `moon fmt --check`、`moon info`、`git diff --exit-code -- '**/pkg.generated.mbti'` | 通过 |
 | CLI 工作链 | `moon run --target wasm-gc cmd/main` 输出四折聚合、对比、质量门禁、Markdown 报告和 `Deployment ready: true` | 通过 |
 | 示例工作链 | `examples/binary_demo`、`examples/comparison_demo` 均可运行 | 通过 |
@@ -63,7 +63,7 @@
 - `moon run --target wasm-gc cmd/main`；
 - `moon info` 后检查生成接口无差异。
 
-本地环境没有 `node.exe` 和 C 编译器，因此本地 `moon test --target all` 的 JS/Native 执行不冒充通过；远端 Actions run #9 已在三平台实际完成并成功。该区分保留了验收证据的可审计性。
+本地环境没有 `node.exe` 和 C 编译器，因此本地 `moon test --target all` 的 JS/Native 执行不冒充通过；远端 Actions run #10 已在三平台实际完成并成功。该区分保留了验收证据的可审计性。
 
 发布链已经实际走通：版本从 `moon.mod` 的 `0.1.3` 打包，`moon publish` 返回 200；随后在全新消费者模块中用 `moon add` 拉取该版本，并实际导入 `workflow`、创建四折实验、聚合和执行门禁，严格检查与测试均通过。
 
@@ -71,9 +71,9 @@
 
 - GitHub：[`myc1234567/moon_metric_lab`](https://github.com/myc1234567/moon_metric_lab)，`main`；
 - Gitlink：[`mycmyc/moon_metric_lab`](https://www.gitlink.org.cn/mycmyc/moon_metric_lab)，`main`；
-- 本轮提交：`e3a8497df3c4dfd339d16b216f77a4f35ec4b809`；
-- 本地 HEAD、GitHub `main` 和 Gitlink `main` 的提交哈希完全一致；
-- GitHub Actions：[run #9](https://github.com/myc1234567/moon_metric_lab/actions/runs/31952871601) 的三个矩阵 job 均为 `completed / success`；
+- 功能代码提交：`e3a8497df3c4dfd339d16b216f77a4f35ec4b809`；最终验收报告提交：`756af7e1ad1d5945bdff47b1942391104cfb4e50`；
+- 当前本地 HEAD、GitHub `main` 和 Gitlink `main` 均为 `756af7e1ad1d5945bdff47b1942391104cfb4e50`；
+- GitHub Actions：[run #10](https://github.com/myc1234567/moon_metric_lab/actions/runs/31953075109) 的三个矩阵 job 均为 `completed / success`；
 - 提交和推送内容只包含代码、测试、README、基准说明、许可证/来源边界、CI、CLI、版本和生成接口；申报书与 `PROPOSAL.md` 均未暂存、未提交、未推送。
 
 ## 最终自查结论
