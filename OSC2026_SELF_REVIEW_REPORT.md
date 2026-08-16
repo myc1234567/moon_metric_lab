@@ -12,7 +12,7 @@
 4. 补充多折统计、显著性/效应量比较及可复现真实场景；
 5. 清理 `_build` 产物，修复编译警告并提交格式化源码。
 
-申报书文件不属于本轮同步范围，未纳入任何本轮提交或推送。
+申报书文件不属于本轮同步范围；工作区中已有的申报书和 `PROPOSAL.md` 修改未纳入任何本轮提交或推送。远端历史上已有 `PROPOSAL.md`，本轮不修改、不删除它。
 
 ## 验收证据矩阵
 
@@ -74,7 +74,7 @@
 - 功能代码提交：`e3a8497df3c4dfd339d16b216f77a4f35ec4b809`；最终验收报告提交：`756af7e1ad1d5945bdff47b1942391104cfb4e50`；
 - 当前本地 HEAD、GitHub `main` 和 Gitlink `main` 均为 `756af7e1ad1d5945bdff47b1942391104cfb4e50`；
 - GitHub Actions：[run #10](https://github.com/myc1234567/moon_metric_lab/actions/runs/31953075109) 的三个矩阵 job 均为 `completed / success`；
-- 提交和推送内容只包含代码、测试、README、基准说明、许可证/来源边界、CI、CLI、版本和生成接口；申报书与 `PROPOSAL.md` 均未暂存、未提交、未推送。
+- 本轮提交和推送内容只包含代码、测试、README、基准说明、许可证/来源边界、CI、CLI、版本和生成接口，以及本验收报告；工作区已有的申报书和 `PROPOSAL.md` 修改均未暂存、未提交、未推送，远端历史 `PROPOSAL.md` 保持原状。
 
 ## 最终自查结论
 
