@@ -71,4 +71,3 @@ pub fn[T] Vector::to_array(Self[T]) -> Array[T]
 // Type aliases
 
 // Traits
-

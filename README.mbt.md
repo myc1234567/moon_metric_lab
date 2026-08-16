@@ -7,7 +7,7 @@
 [![GitLink Repo](https://img.shields.io/badge/GitLink-mycmyc%2Fmoon__metric__lab-blue?logo=git)](https://gitlink.org.cn/myc1234567/moon_metric_lab)
 [![GitHub Mirror](https://img.shields.io/badge/GitHub-myc1234567%2Fmoon__metric__lab-black?logo=github)](https://github.com/myc1234567/moon_metric_lab)
 
-**MoonMetricLab** is a high-performance, pure MoonBit evaluation suite and benchmark comparison framework tailored for machine learning models and experiments. Built from the ground up using zero-copy views and cross-platform numerical stability guarantees, it empowers developers and data scientists to evaluate, compare, and visualize machine learning pipelines across **Wasm-GC**, **Wasm**, **JavaScript**, and **Native** targets without external dependencies.
+**MoonMetricLab** is a pure MoonBit evaluation suite and benchmark comparison framework for machine learning models and experiments. It uses zero-copy views and explicit numerical validation to evaluate, compare, and visualize pipelines across supported MoonBit targets without third-party runtime dependencies.
 
 ---
 
@@ -47,7 +47,7 @@ myc1234567/moon_metric_lab
 | [`ranking`](./ranking) | IR & recommendation metrics | `ndcg_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `average_precision` |
 | [`report`](./report) | Benchmark reporting | `ModelResult`, `compare_models`, `ComparisonReport` |
 | [`visualization`](./visualization) | Multi-format rendering | `to_ascii_bar_chart`, `to_markdown_table`, `to_svg_roc_curve`, `to_csv_string` |
-| [`hypothesis_testing`](./hypothesis_testing) | Multi-fold statistics & significance comparison | `aggregate_folds_mean`, `welch_t_test` |
+| [`hypothesis_testing`](./hypothesis_testing) | Multi-fold statistics, significance comparison and effect sizes | `aggregate_folds_mean`, `welch_t_test`, `paired_mean_difference`, `standard_error`, `cohens_d` |
 
 ---
 
@@ -57,7 +57,7 @@ Add `moon_metric_lab` as a dependency in your `moon.mod`:
 
 ```toml
 [deps]
-"myc1234567/moon_metric_lab" = "0.1.1"
+"myc1234567/moon_metric_lab" = "0.1.2"
 ```
 
 Then, you can import any sub-package (e.g., `core`, `classification`, `regression`, `hypothesis_testing`) in your `moon.pkg`:
@@ -72,8 +72,10 @@ import {
 Or via the `moon` command-line tool:
 
 ```bash
-moon add myc1234567/moon_metric_lab
+moon add myc1234567/moon_metric_lab@0.1.2
 ```
+
+After adding the dependency, import the package path you use in `moon.pkg`. The public API is described by the tracked `pkg.generated.mbti` files, so consumers can inspect signatures without reading implementation files.
 
 ---
 
@@ -161,6 +163,19 @@ test "README comparison demo" {
 }
 ```
 
+### 6. Multi-fold significance and effect size
+
+```mbt check
+test "README significance demo" {
+  let before = @core.Vector::from_array([0.70, 0.75, 0.80, 0.85])
+  let after = @core.Vector::from_array([0.75, 0.80, 0.85, 0.90])
+  let difference = @hypothesis_testing.paired_mean_difference(before, after)
+  inspect!(difference > 0.049 && difference < 0.051, content="true")
+  let effect = @hypothesis_testing.cohens_d(before, after)
+  inspect!(effect < 0.0, content="true")
+}
+```
+
 ---
 
 ## 🛠️ Tooling & Commands
@@ -171,15 +186,24 @@ Build and verify the whole project across targets using the official MoonBit CLI
 # Check compilation across all targets (Wasm-GC, Wasm, JS, Native)
 moon check --target all
 
-# Run comprehensive blackbox unit test suite
-moon test --target wasm-gc -v
+# Run the complete test suite on every available backend
+moon test --target all --deny-warn
 
 # Generate updated package interfaces
 moon info
 
+# Verify that generated public interfaces are already up to date
+git diff --exit-code -- '**/pkg.generated.mbti'
+
 # Run the full CLI evaluation showcase
 moon run --target wasm-gc cmd/main
 ```
+
+### Publishing to mooncakes.io
+
+The published module name is `myc1234567/moon_metric_lab`, and the repository version must be bumped before each release. Run the same validation commands above, then execute `moon publish` from the module root. Verify the result with `moon add myc1234567/moon_metric_lab@<version>` in a clean consumer module. This repository keeps generated interfaces and the root `LICENSE` in the package so the published archive remains inspectable.
+
+For dataset provenance, reproducible benchmark protocol, and the boundary matrix, see [BENCHMARKS.md](./BENCHMARKS.md). The repository contains compact examples rather than redistributed copies of external datasets.
 
 ---
 
@@ -189,5 +213,5 @@ This project is open-sourced under the [Apache License 2.0](./LICENSE).
 Developed for the **MoonBit OSC 2026 Open Source Track**, showcasing pure MoonBit architectural design, comprehensive documentation, and multi-backend portability.
 
 ### 🛡️ Third-Party Source Boundary & Originality Declaration (第三方来源边界与原创代码声明)
-- **100% Original Implementation**: All source code (`2,897` lines of pure MoonBit `.mbt` code across `core`, `classification`, `regression`, `clustering`, `ranking`, `report`, and `visualization`) is **completely original** and developed from scratch by **mycmyc** (`莫延春`). No third-party source code or external libraries (`scikit-learn`, `SciPy`, etc.) were copied, ported, or linked.
-- **Mathematical Principle Boundary**: The mathematical formulas and statistical evaluation metrics implemented in this library (such as ROC AUC, Huber Loss, Silhouette Coefficient, NDCG@K, Confusion Matrix, and MAE/RMSE) are based on standard, public-domain mathematical definitions from classical statistical textbooks and peer-reviewed academic literature. The software architecture, zero-copy `VectorView`/`MatrixView` slice operations, error handling, and numerical stability mechanisms are 100% independent engineering innovations. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for detailed bibliography and boundary clarifications.
+- **Original implementation scope**: The repository currently contains **3,134 effective lines** of MoonBit source (excluding generated interfaces and build artifacts), including the `hypothesis_testing` package and its boundary tests. The implementation is authored in this repository; external dataset rights remain with their respective providers.
+- **Mathematical principle boundary**: The metrics implemented here (ROC AUC, Huber Loss, Silhouette, NDCG@K, Confusion Matrix, MAE/RMSE and others) follow standard mathematical definitions. The repository's data structures, error handling, numerical validation and multi-format rendering are implemented as MoonBit engineering in this project. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for the source and license boundary.

@@ -25,4 +25,3 @@ pub fn reciprocal_rank(Array[Double], Array[Double], threshold? : Double) -> Dou
 // Type aliases
 
 // Traits
-

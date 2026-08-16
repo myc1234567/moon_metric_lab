@@ -1,7 +1,24 @@
 // Generated using `moon info`, DON'T EDIT IT
 package "myc1234567/moon_metric_lab/hypothesis_testing"
 
+import {
+  "myc1234567/moon_metric_lab/core",
+}
+
 // Values
+pub fn aggregate_folds_mean(Array[@core.Vector[Double]]) -> Array[Double] raise @core.MetricError
+
+pub fn cohens_d(@core.Vector[Double], @core.Vector[Double]) -> Double raise @core.MetricError
+
+pub fn mean(@core.Vector[Double]) -> Double raise @core.MetricError
+
+pub fn paired_mean_difference(@core.Vector[Double], @core.Vector[Double]) -> Double raise @core.MetricError
+
+pub fn standard_error(@core.Vector[Double]) -> Double raise @core.MetricError
+
+pub fn variance(@core.Vector[Double]) -> Double raise @core.MetricError
+
+pub fn welch_t_test(@core.Vector[Double], @core.Vector[Double]) -> Double raise @core.MetricError
 
 // Errors
 
@@ -10,4 +27,3 @@ package "myc1234567/moon_metric_lab/hypothesis_testing"
 // Type aliases
 
 // Traits
-

@@ -64,7 +64,7 @@ pub fn top_k_accuracy(
 ///|
 /// Helper to extract all unique class labels sorted in ascending order.
 fn get_unique_classes(arr1 : Array[Int], arr2 : Array[Int]) -> Array[Int] {
-  let set = {}
+  let set : Map[Int, Unit] = Map([])
   for v in arr1 {
     set[v] = ()
   }

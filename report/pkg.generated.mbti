@@ -46,4 +46,3 @@ pub fn ModelResult::new(String, String) -> Self
 // Type aliases
 
 // Traits
-

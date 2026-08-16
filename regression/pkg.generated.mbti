@@ -33,4 +33,3 @@ pub fn rmse(Array[Double], Array[Double]) -> Double raise @core.MetricError
 // Type aliases
 
 // Traits
-

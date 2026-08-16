@@ -4,6 +4,17 @@ All notable changes to the `MoonMetricLab` project will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-08-16
+
+### Added
+- Multi-fold comparison helpers for paired mean difference, standard error, and Cohen's d effect size.
+- Reproducible benchmark provenance and external dataset redistribution boundaries in `BENCHMARKS.md`.
+
+### Fixed
+- Removed MoonBit ambiguous-brace warnings for empty maps.
+- Moved hypothesis-testing implementations out of a test-suffixed file so the public APIs are included in published packages.
+- Excluded `_build/` artifacts from the repository and added strict all-target CI checks.
+
 ## [0.1.0] - 2026-07-09
 
 ### Added

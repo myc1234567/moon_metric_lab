@@ -25,4 +25,3 @@ pub fn to_svg_roc_curve(Array[Double], Array[Double], Double, width? : Int, heig
 // Type aliases
 
 // Traits
-

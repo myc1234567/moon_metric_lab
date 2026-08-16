@@ -48,11 +48,16 @@ jobs:
       - name: Check Formatting
         run: moon fmt --check
 
-      - name: Check Core
-        run: moon check --target all
+      - name: Check All Targets
+        run: moon check --target all --deny-warn
 
-      - name: Run Tests (Wasm)
-        run: moon test --target wasm
+      - name: Run Tests (All Targets)
+        run: moon test --target all --deny-warn
+
+      - name: Run Showcase
+        run: moon run --target wasm-gc cmd/main
 
       - name: Check Info
-        run: moon info
+        run: |
+          moon info
+          git diff --exit-code -- '**/pkg.generated.mbti'

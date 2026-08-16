@@ -14,8 +14,8 @@ fn build_contingency_table(
   labels_true : Array[Int],
   labels_pred : Array[Int],
 ) -> (@core.Matrix[Int], Array[Int], Array[Int]) raise @core.MetricError {
-  let true_map : Map[Int, Int] = {}
-  let pred_map : Map[Int, Int] = {}
+  let true_map : Map[Int, Int] = Map([])
+  let pred_map : Map[Int, Int] = Map([])
   let mut t_idx = 0
   let mut p_idx = 0
   for l in labels_true {

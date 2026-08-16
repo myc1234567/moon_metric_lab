@@ -28,7 +28,7 @@ pub fn silhouette_score(
       message="Silhouette score requires at least 2 samples",
     )
   }
-  let cluster_set : Map[Int, Int] = {}
+  let cluster_set : Map[Int, Int] = Map([])
   for l in labels {
     let cur = match cluster_set.get(l) {
       Some(c) => c
@@ -123,7 +123,7 @@ pub fn calinski_harabasz_score(
       message="Calinski-Harabasz score requires at least 2 samples",
     )
   }
-  let cluster_map : Map[Int, Array[Array[Double]]] = {}
+  let cluster_map : Map[Int, Array[Array[Double]]] = Map([])
   for i in 0..<n {
     let l = labels[i]
     let arr = match cluster_map.get(l) {
@@ -178,7 +178,7 @@ pub fn davies_bouldin_score(
       message="Davies-Bouldin requires at least 2 samples",
     )
   }
-  let cluster_map : Map[Int, Array[Array[Double]]] = {}
+  let cluster_map : Map[Int, Array[Array[Double]]] = Map([])
   for i in 0..<n {
     let l = labels[i]
     let arr = match cluster_map.get(l) {
@@ -198,8 +198,8 @@ pub fn davies_bouldin_score(
       message="Davies-Bouldin requires 2 <= n_clusters < n_samples",
     )
   }
-  let centroids : Map[Int, Array[Double]] = {}
-  let scatters : Map[Int, Double] = {}
+  let centroids : Map[Int, Array[Double]] = Map([])
+  let scatters : Map[Int, Double] = Map([])
   for c_id in unique_clusters {
     let c_points = cluster_map[c_id]
     let c_centroid = compute_centroid(c_points)

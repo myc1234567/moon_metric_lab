@@ -4,10 +4,10 @@ This document explicitly defines the boundaries between original software engine
 
 ---
 
-## 1. 100% Original Code Declaration (纯原创代码声明)
+## 1. Original Implementation Declaration (原创实现声明)
 
-- **Original Authorship**: The `MoonMetricLab` project (`2,897` lines of pure MoonBit `.mbt` source code across `core`, `classification`, `regression`, `clustering`, `ranking`, `report`, and `visualization`) is **100% originally developed from scratch** by **mycmyc** (`莫延春`, `2412158932@qq.com`, GitHub: `myc1234567`).
-- **No Third-Party Software Code Copied or Ported**: No source files, code snippets, or binary dependencies from external third-party libraries (such as Python `scikit-learn`, `SciPy`, `PyTorch`, `R`, Rust `linfa`, or Julia `MLJ`) have been copied, ported, or linked.
+- **Original Authorship**: The `MoonMetricLab` project currently contains `3,134` effective lines of MoonBit source, excluding generated interfaces and build artifacts. The implementation is authored in this repository by **mycmyc** (`莫延春`, `2412158932@qq.com`, GitHub: `myc1234567`). External dataset rights are not claimed by this project.
+- **No Third-Party Software Code Copied or Ported**: The project implementation was written in this repository and does not intentionally copy or port source files from external libraries. The named projects are reference points for mathematical terminology only, not runtime dependencies.
 - **Zero External Dependencies**: The repository relies solely on MoonBit 2.0 standard core primitives (`moonbitlang/core/math` and `moonbitlang/core/double`).
 
 ---
@@ -35,7 +35,7 @@ The following mathematical formulas implemented within our packages are universa
    - *MRR (Mean Reciprocal Rank) & MAP (Mean Average Precision)*: Manning, C. D., Raghavan, P., & Schütze, H. (2008). *Introduction to Information Retrieval*. Cambridge University Press.
 
 ### (B) Independent Software Engineering Innovations (本项目独立创新技术)
-While the equations above belong to the public domain of mathematics, **the software architecture, algorithmic workflows, data structures, and multi-backend optimizations in `MoonMetricLab` belong exclusively to our original software engineering contributions**:
+While the equations above are standard mathematical definitions, **the software architecture, algorithmic workflows, data structures, and multi-backend implementation in `MoonMetricLab` are the project's own engineering work**:
 1. **Zero-Copy Slice Views (`VectorView` / `MatrixView`)**: Original type abstractions leveraging `offset` and `stride` arithmetic to perform high-speed windowed calculations without memory allocations across Wasm-GC and JavaScript.
 2. **Cross-Platform Numerical Stability Framework**: Original implementation of global `EPSILON (1e-15)` zero-drift guards, asymptotic exponential truncation for `log_cosh` under large inputs, and checked integer/double conversions across different JS numbers and Wasm float types.
 3. **Explicit Polymorphic Error System**: Replacement of standard C/Python abort checks (`assert`/`panic`) with typed MoonBit 2.0 error raising (`raise @core.MetricError`) and custom `suberror` handling (`DimensionMismatch`, `DivisionByZero`, `InvalidThreshold`).
@@ -44,4 +44,4 @@ While the equations above belong to the public domain of mathematics, **the soft
 ---
 
 ## Summary Statement
-`MoonMetricLab` is **not** a translation or port of `scikit-learn` or any other software codebase. It is a **fresh, ground-up MoonBit implementation** that standardizes classical mathematical metrics into an idiomatic, high-performance MoonBit 2.0 type system.
+`MoonMetricLab` is **not** a translation or source port of `scikit-learn` or another software codebase. It is a MoonBit implementation of standard evaluation definitions, with external dataset provenance and redistribution limits documented separately in `BENCHMARKS.md`.

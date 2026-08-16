@@ -29,49 +29,41 @@ pub fn variance(v : @core.Vector[Double]) -> Double raise @core.MetricError {
 }
 
 ///|
-/// Computes the independent two-sample t-test statistic.
-/// Assuming unequal variances (Welch's t-test).
+/// Computes the independent two-sample Welch t-test statistic.
 pub fn welch_t_test(
   sample1 : @core.Vector[Double],
   sample2 : @core.Vector[Double],
 ) -> Double raise @core.MetricError {
   let n1 = sample1.length().to_double()
   let n2 = sample2.length().to_double()
-
   if n1 < 2.0 || n2 < 2.0 {
     raise @core.InvalidInput(
       message="T-test requires at least two samples in each group",
     )
   }
-
   let m1 = mean(sample1)
   let m2 = mean(sample2)
   let v1 = variance(sample1)
   let v2 = variance(sample2)
-
   let denom = (v1 / n1 + v2 / n2).sqrt()
   if denom <= @core.EPSILON {
-    return 0.0
+    0.0
+  } else {
+    (m1 - m2) / denom
   }
-
-  (m1 - m2) / denom
 }
 
 ///|
-/// Multi-seed/multi-fold statistics aggregator.
-/// Takes an array of metric vectors (e.g., each vector represents results over seeds for a specific fold)
-/// and returns the mean vector across the first dimension.
+/// Aggregates a metric vector across folds or random seeds.
 pub fn aggregate_folds_mean(
   folds : Array[@core.Vector[Double]],
 ) -> Array[Double] raise @core.MetricError {
   if folds.length() == 0 {
     raise @core.InvalidInput(message="No folds provided")
   }
-
   let inner_len = folds[0].length()
   let result = Array::make(inner_len, 0.0)
   let fold_count = folds.length().to_double()
-
   for f in folds {
     if f.length() != inner_len {
       raise @core.DimensionMismatch(expected=inner_len, actual=f.length())
@@ -80,10 +72,8 @@ pub fn aggregate_folds_mean(
       result[i] = result[i] + f.get(i)
     }
   }
-
   for i = 0; i < inner_len; i = i + 1 {
     result[i] = result[i] / fold_count
   }
-
   result
 }

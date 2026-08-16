@@ -15,7 +15,7 @@ pub fn ConfusionMatrix::from_predictions(
   @core.validate_non_empty(y_true)
   let classes = get_unique_classes(y_true, y_pred)
   let n_classes = classes.length()
-  let class_map : Map[Int, Int] = {}
+  let class_map : Map[Int, Int] = Map([])
   for i in 0..<n_classes {
     class_map[classes[i]] = i
   }
